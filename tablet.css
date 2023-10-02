@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/* CSS Documment */
+/* The Body */
+
+/* Reset some default styles for the body */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+  #header{
+    width: 100;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+/*Creating list to position nav links*/
+  .list1{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo styles */
+.logo {
+    width: 35px;
+    height: 35px;
+    background: black;
+    margin: 20px; 
+    float: left; 
+    transform: rotate(-30deg);
+  }
+  
+  .logo span {
+    line-height: 1.4;
+    color: #591BC5;
+    font-size: 2em;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+/*Creating the background cubes design*/
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    border: solid 1px white;
+    width: 10px;
+    height: 10px;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 16s ease-in forwards infinite;
+  }
+  /*Postioning the cubes and adding delays*/
+  .cube:nth-child(2n) {
+    border-color: white;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  
+  /*making the cubes rotate and then fade away*/
+  @keyframes cube {
+  from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+
+/* Desktop navigation styles */
+#desktop {
+    color: black;
+    float: right;
+    margin: 30px 90px;
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    transition: .3s;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #591BC5;
+    transition: .5;
+    font-size: 18px;
+    margin-left: 16px;
+  }
+
+  /*When cursour is hovered over nav link white box will appear going up and in an angle to show link thats being chosen*/
+  nav ul li:hover a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul li:hover {
+    height: 45px;
+    padding-top: 20px;
+    margin-top: -20px;
+    background: linear-gradient(180deg, #591BC5, white);
+    text-decoration: none;
+    transform: skew(20deg);
+  }
+
+  /*Designing the header/p text and positioning*/
+  .header {
+    margin-top: 25%;
+    color: #591BC5;
+    text-align: center;
+  }
+  .header h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 3em;
+  }
+  .header p {
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+/*Isolating the one word in the span and changing it's colour*/
+.header h1 span{
+    color: white;
+
+}
+
+
+/*-----------------------about-------------------------*/
+
+#about{
+    padding: 60px 0;
+    color: #ababab;
+
+}
+/*Universal list that will be used as a layout for the remainder of the pages*/
+.list{
+  padding: 10px 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Positioning image*/
+.image-left {
+  flex-basis: 35%;
+}
+
+/*Designing the image */
+.image-left img {
+  max-width: 100%; 
+  margin: 10px;
+  border-radius: 30px;
+  height: auto; 
+  
+}
+
+/*Positioning the p text*/
+.row p{
+  flex-basis: 60%;
+}
+
+/*Universal sub title. Will be used as a layout for all sub-titles on the website*/
+.sub-title{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/*positioning the  margin of the title of the tab and its display*/
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+/*Position and design of the tab links*/
+.tab-links{
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+/*Creating a line under the tab-links text that is only 25% width*/
+.tab-links::after{
+    content: "";
+    width: 25%;
+    background: #591BC5;
+    position: absolute;
+    height: 4px;
+    transition: 0.5s;
+    left: 0;
+    bottom: -10px;
+}
+
+
+/*Making the line width 100% when the cursor is on it*/
+.tab-links:hover::after{
+  width: 100%;
+}
+
+/*hiding the contents */
+.tab-contents{
+    display: none;
+}
+
+
+/*Making the video design*/
+.video {
+  margin-top: 20px;
+  margin-left: 50px;
+  max-width: 75%;
+  cursor: pointer;
+}
+
+.video video {
+  position: center;
+  width: 40%; 
+  height: 50%; 
+  border-radius: 30px;
+}
+
+
+/*----------------------project-------------*/
+#project{
+    padding: 60 px 0;
+}
+
+/*Creating a grid display*/
+
+
+/*Making the box border*/
+.project-list div{
+    font-weight: 300;
+    background: linear-gradient(rgba(0,0,0,0.1),#591BC5);
+    padding: 40px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: background  0.5s, transform 0.5s;
+    cursor: pointer;
+    margin: 30px;
+}
+
+
+/*Customizing the headers of the boxes*/
+.project-list div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/*When the cursor is on the mouse it will change backgrounds and move the boxes up*/
+.project-list div:hover{
+  transform: translateY(-12px);
+    background: #591BC5;
+}
+
+
+/*-----------contact--------------*/
+
+/*designing left side of the contact page*/
+.left-side{
+    flex-basis: 40%;
+}
+/*Designing and postioning the h3 header on the left side*/
+.left-side h3{
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+/*designing the right side of the contact*/
+.right-side{
+    flex-basis: 50%;
+}
+
+.right-side form{
+    width: 100%;
+}
+
+.input {
+    margin-top: 20px;
+    position: relative;
+  }
+
+
+form input{
+    font-size: 14px;
+    background: black;
+    margin-bottom: 20px;
+    text-decoration: none;
+    padding: 15px;
+    border: 3px solid #591BC5;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+form textarea{
+    width: 100%;
+    background: black;
+    padding: 15px;
+    border: 3px solid #591BC5;
+    outline: 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  label {
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    cursor: text;
+    
+  }
+/* Moving textarea and input label above boxes and staying there once someone enters text */
+textarea:focus~label,
+textarea:valid~label {
+  top: -40px;
+  font-size: 15px;
+}
+input:focus~label,
+input:valid~label {
+  top: -40px;
+  font-size: 15px;
+}
+
+/*-------------designing the button----------*/
+.btn{
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+    transition: background 0.5s;
+    color: #fff;
+    border: 3px solid #591BC5;
+    border-radius: 10px;
+    padding: 15px 50px;
+    cursor: pointer;
+    background: transparent;
+
+}
+
+/*------------When the button is hovered on this background will display------------*/
+.btn:hover{
+    background: #591BC5;
+}
+
+
+
+/*-------------------Designing the copyright footer----------*/
+.copyright{
+    width: 100%;
+    font-weight: 300;
+    margin-top: 20px;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+
+}
+
+
+.email a{
+    text-decoration: none;
+    color: #591BC5;
+    font-size: 15px;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.copy{
+    text-align: left;
+    padding-left: 20px; 
+}
+.copyright i{
+  color: #591BC5;
+}
+
+.copy span{
+  font-weight: bold;
+  color: #591BC5;
+}
+
+
+
+/*Media query not needed website looks good with min width 481 and max width 980*/
+
+
+
