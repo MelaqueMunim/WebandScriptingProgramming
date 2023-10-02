@@ -1,0 +1,192 @@
+<!--The HTML DOCTYPE DECLARTION-->
+<!DOCTYPE HTML>
+<!--All page content is inside the HTML element-->
+<html>
+<!--Head element content, not visible in browser window-->    
+    <head>
+        <!--The UTF-8 character set provides the most support for all symbols and characters-->
+        <meta charset="UTF-8">
+        <!--Creating the title of the Page-->
+        <title>Munim's Portfolio</title>
+        <!--Linking to style sheet file-->
+        <!-- full-size monitor style sheet-->
+        <link href="full.css" rel="stylesheet" type="text/css" media="only screen and
+        (min-width:960px)">
+        <!-- tablet style sheet-->
+        <link href="tablet.css" rel="stylesheet" type="text/css" media="only screen and
+        (min-width:481px) and (max-width:960px)">
+        <!-- phone style sheet-->
+        <link href="phone.css" rel="stylesheet" type="text/css" media="only screen and
+        (max-width:480px)">
+        <!---Adding fonts to the website from google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://kit.fontawesome.com/895592a005.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!--Content visible in the browser is inside the HTML element-->
+    <body>
+        <!--Putting the home page in the div named header-->
+        <div id="header">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+
+            <!--Creating the logo and the navigation links-->
+            <div class="list1">
+                <div class="logo"><span>M</span></div>
+                <header id="desktop">
+                    <nav>
+                        <ul>
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#about" title="About me page">About me</a></li>
+                            <li><a href="#project">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>    
+                    </nav>
+                </header>
+                <!-- Welcome header and description -->
+                <section class="header">
+                    <h1>Welcome to <span>Munim's</span> Portfolio</h1>
+                    <p> Explore my website, where I invite you to discover who I am, what drives me, and the stories I'm passionate about sharing. Join me on this journey of self-expression and exploration. Welcome to my creative universe.</p>
+                </section>
+            </div>
+
+        </div>
+        <!--About me-->
+        <div id="about">
+            <div class="list">
+                <h1 class="sub-title">About Me</h1>
+                <div class="row">
+                    <div class="image-left">
+                        <img src="Head shot photo.jpg">
+                    </div>
+                    <p>I am a driven and dynamic undergraduate student with a strong background in communication and technology. My experience demonstrates my ability to create a welcoming and positive work environment. I am actively seeking part-time or casual job opportunities where I can leverage my existing skills and acquire new knowledge. I possess comprehensive knowledge in network and security IT, along with proficiency in programming languages such as Java and Python. Additionally, I excel in data entry and computer skills, including expertise in Windows, macOS, Microsoft Office Suite, Maestro, SMP, and Xray, with a typing speed of 60 words per minute. My excellent verbal and written communication skills enable me to build valuable relationships with colleagues and clients, delivering high-quality customer service through effective collaboration with teams. With exceptional time management, analytical, and organizational skills, I am committed to meeting company expectations and achieving goals while prioritizing secure product processing. I also pride myself on fostering a cohesive and welcoming work environment through exceptional teamwork, benefiting both colleagues and clients.</p>    
+                    <div class="tab-title">
+                        <!--When this p tag is clicked open the video-content-->
+                        <p class="tab-links" onclick="opentab('video-content')">Video</p>
+                    </div>
+                    <div class="tab-contents" id="video-content">
+                        <div class="video">
+                            <video controls autoplay src="About me video.mp4"></video>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--services-->
+        <div id="project">
+            <div class="list">
+                <h1 class="sub-title">My Work</h1>
+                <div class="project-list">
+                    <div class="project-content-1">
+                        <h2>GUI Scheduler application Project</h2>
+                        <p>In this project, the program provides a user-friendly interface for visualizing CPU scheduling algorithms. Users begin by launching the program, selecting an input file, and then choosing from a variety of scheduling algorithms, including Non-Preemptive Highest Priority First (HPF), First Come First Served (FCFS), Round Robin with a fixed time quantum (RR), and Preemptive Shortest Remaining Time Next (SRTN). By clicking the "Show/Update Graph" button, users can generate visual representations of these algorithms' schedules.</p>
+                    </div>
+                    <div class="project-content-2">
+                        <h2>Python Hang-Man Project</h2>
+                        <p>In this project,I and a team Python hangman game lets players guess a secret word one letter at a time. It starts with a menu for playing or exiting. During the game, players input letters, which are checked for validity and repetition. The game updates the word display and tracks incorrect guesses. It ends when players win, lose due to too many mistakes, or exit. Afterward, the player gets the result, and the secret word is revealed.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <!--contact-->
+    <div id="contact">
+        <div class="list">
+            <div class="row">
+                <!--Creating the left side of the contact page-->
+                <div class="left-side">
+                    <h1 class="sub-title">Contact</h1>
+                    <h3>Want to get in contact? <br>Please fill in the boxes<br></h3>
+                </div>
+                <!---Creating the right side of the contact page-->
+                <div class="right-side">
+                    <form>
+                        <!--Creating the text inputs and labels for the contact page-->
+                        <!--adding the required feature to make sure the input boxes are filled in before submitting-->
+                        <div class="input">
+                            <input id="Your name" required>
+                            <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                        </div>
+                        
+                        <div class="input">
+                            <input type="email" id="Your email" required>
+                            <label for="email"><i class="fa-solid fa-inbox"></i> Your Email</label>
+                        </div>
+                        <div class="input">
+                            <textarea id="Message" row="10" required></textarea>
+                            <label for="name"><i class="fa-regular fa-message"></i> Message</label>
+                        </div>
+                        <div class="input">
+                            <input type="number" id="Your name" required>
+                            <label for="number"><i class="fa-solid fa-robot"></i>* What is 10+10</label>
+                        </div>
+                        <!--Creating button-->
+                        <button type="submit" class="btn"> Submit</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-->
+
+    <header class="copyright">
+        <article>
+            <section>
+                <!--Navigating to the email-->
+                <nav id="main">
+                    <div class="email">
+                        <p>Email: <a href="mailto:munim.melaque@ontariotechu.net">munim.melaque@ontariotechu.net</a></p>
+                    </div>
+                </nav>
+            </section>
+        </article>
+        <!--Adding copyright footer-->
+        <footer>
+            <div class="copy">
+                <p><i class="fa-regular fa-copyright"></i> 2023 by <span>Munim Melaque</span> with <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </footer>
+    </header>
+    <!--Putting the function in a script-->
+    <script>
+        function opentab(tabName) {
+            // Select all elements with the class 'tab-contents' and store them in the variable tabContents.
+            var tabContents = document.querySelectorAll('.tab-contents');
+    
+            // Hide all tab contents except the selected one
+            tabContents.forEach(function (content) {
+                if (content.id === tabName) {
+                    // if the Toggle the display of selected content to block or none
+                    if (content.style.display === 'block') {
+                        // the content will be hidden if currently displaying
+                        content.style.display = 'none';
+                    //display content if hidden
+                    } else {
+                        content.style.display = 'block';
+                    }
+                 //if  the content's id isn't the tabName then the display will be none   
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        }
+        
+    </script>
+
+    </body>
+    
+    
+
+
+
+
+
+</html>
